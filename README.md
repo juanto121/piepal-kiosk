@@ -19,7 +19,12 @@ The project `.npmrc` pins the public npm registry so installs work locally and o
 
 Everything lives in [src/config/pies.json](src/config/pies.json):
 
-- `paymentUrl` per pie: the link encoded in the QR. **Empty until you add your payment link**; the Pay screen shows a "missing link" notice instead of a QR.
+- `paymentQrImage` per pie: a ready-made payment QR in `public/`. Currently `/payment-qr.png`, the Bancolombia QR from `assets/qr.png` (static, $8.000 COP built in), shared by both pies. To replace it, update `assets/qr.png` and regenerate the optimized copy:
+  ```bash
+  python3 -c "from PIL import Image; im=Image.open('assets/qr.png').convert('RGBA'); bg=Image.new('RGBA', im.size, 'white'); bg.alpha_composite(im); bg.convert('L').save('public/payment-qr.png', optimize=True)"
+  ```
+  If a QR's amount ever differs from the pie's `price`, customers will be charged the QR's amount.
+- `paymentUrl` per pie: used only when `paymentQrImage` is not set; the kiosk generates a QR from this link. If both are empty, the Pay screen shows a "missing link" notice.
 - `image` per pie: put photos in `public/pies/` and set e.g. `"/pies/lemon.jpg"`. `null` shows the illustrated placeholder.
 - `price`, `initialStock`, `paymentTimeoutSeconds`, `lowStockThreshold`, `pickupNote`, `ownerPin`.
 

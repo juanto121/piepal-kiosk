@@ -52,7 +52,13 @@ export function PayScreen({ lang, t, pie, startedAt, onLangChange, onBack, onPai
           <p className="pay__price">{formatPrice(pie.price)}</p>
           <p className="pay__instruction">{t('payInstruction')}</p>
         </section>
-        <PaymentQr url={pie.paymentUrl} missingLabel={t('missingPaymentLink')} />
+        {pie.paymentQrImage ? (
+          <div className="qr qr--image">
+            <img src={pie.paymentQrImage} alt="QR" draggable={false} />
+          </div>
+        ) : (
+          <PaymentQr url={pie.paymentUrl} missingLabel={t('missingPaymentLink')} />
+        )}
         <Mascot pose="pay" className={`pay__mascot ${late ? 'is-late' : 'tap-foot'}`} />
       </main>
       <footer className="pay__actions">

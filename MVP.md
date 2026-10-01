@@ -55,7 +55,7 @@ A friendly, single-screen kiosk for piepal.co that runs all day on a screen in t
 - Header: **"Escanea para pagar"**
 - Selected pie name + thumbnail + **total price** (largest text on the screen).
 - **QR code**, at least 300×300 px, high contrast, with a quiet zone around it.
-- Short instruction: "Abre la cámara de tu celular y escanea el código."
+- Short instruction: "Escanea el código con la app de tu banco."
 - Dino holding a sign / tapping its foot while waiting.
 - **Visible countdown starting at 2:00** (e.g. a ring or progress bar around the button, plus `m:ss` text).
   - In the last 30 seconds the countdown turns accent-colored and a nudge appears: "¿Ya pagaste? Toca el botón 👇".
@@ -101,7 +101,7 @@ A friendly, single-screen kiosk for piepal.co that runs all day on a screen in t
 | Back | ← Volver | ← Back |
 | Sold out | Agotado — el dino se los comió todos 🦖 | Sold out — the dino ate them all 🦖 |
 | Pay title | Escanea para pagar | Scan to pay |
-| Pay instruction | Abre la cámara de tu celular y escanea el código. | Open your phone camera and scan the code. |
+| Pay instruction | Escanea el código con la app de tu banco. | Scan the code with your banking app. |
 | Countdown nudge | ¿Ya pagaste? Toca el botón 👇 | Paid already? Tap the button 👇 |
 | Paid button | Ya pagué ✓ | I've paid ✓ |
 | Change pie | ← Elegir otro pie | ← Choose a different pie |

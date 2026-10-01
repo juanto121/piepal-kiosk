@@ -12,8 +12,10 @@ export interface Pie {
   initialStock: number
   /** Path under /public (e.g. "/pies/lemon.jpg"); null shows the illustrated placeholder. */
   image: string | null
-  /** Payment link encoded in the QR. Empty shows a "missing link" tile instead of a QR. */
+  /** Payment link encoded in a generated QR. Used only when `paymentQrImage` is not set. */
   paymentUrl: string
+  /** Ready-made payment QR under /public (e.g. a bank QR). Takes precedence over `paymentUrl`. */
+  paymentQrImage?: string | null
 }
 
 export interface KioskConfig {

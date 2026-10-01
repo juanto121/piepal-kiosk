@@ -501,6 +501,7 @@ p {
 
 .pay__info {
   flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: clamp(8px, 2vmin, 20px);
@@ -531,7 +532,7 @@ p {
 .pay__price {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(56px, 11vmin, 112px);
+  font-size: clamp(48px, 8vmin, 100px);
   line-height: 1;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -562,6 +563,17 @@ p {
   image-rendering: pixelated;
 }
 
+/* Bank QRs are dense (~113 modules): show them as large as the screen allows,
+   capped by height so the button row still fits, and scale smoothly. */
+.qr--image {
+  width: clamp(320px, min(62vmin, 100dvh - 340px), 620px);
+  padding: 16px;
+}
+
+.qr--image img {
+  image-rendering: auto;
+}
+
 .qr--missing {
   padding: 32px;
   border: 4px dashed var(--alert);
@@ -573,6 +585,7 @@ p {
 
 .pay__mascot {
   flex: 1 1 0;
+  min-width: clamp(160px, 22vw, 300px);
   max-width: 440px;
   max-height: 46vh;
   margin-left: calc(var(--gap) * -0.5);
@@ -928,8 +941,9 @@ p {
     grid-area: title;
   }
 
-  .qr {
-    width: min(52vw, 520px);
+  .qr,
+  .qr--image {
+    width: min(56vw, 560px);
   }
 
   .choose {

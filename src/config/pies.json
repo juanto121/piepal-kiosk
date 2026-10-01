@@ -16,7 +16,10 @@
     {
       "id": "berries",
       "theme": "berry",
-      "name": { "es": "Pie de frutos rojos", "en": "Berry pie" },
+      "name": {
+        "es": "Pie de frutos rojos",
+        "en": "Berry pie"
+      },
       "description": {
         "es": "Frutos rojos con masa de mantequilla.",
         "en": "Mixed berries, buttery crust."
@@ -24,12 +27,16 @@
       "price": 8000,
       "initialStock": 10,
       "image": null,
-      "paymentUrl": ""
+      "paymentUrl": "",
+      "paymentQrImage": "/payment-qr.png"
     },
     {
       "id": "lemon",
       "theme": "lemon",
-      "name": { "es": "Pie de limón", "en": "Lemon pie" },
+      "name": {
+        "es": "Pie de limón",
+        "en": "Lemon pie"
+      },
       "description": {
         "es": "Relleno cítrico de limón con masa de mantequilla.",
         "en": "Zesty lemon filling, buttery crust."
@@ -37,7 +44,8 @@
       "price": 8000,
       "initialStock": 10,
       "image": null,
-      "paymentUrl": ""
+      "paymentUrl": "",
+      "paymentQrImage": "/payment-qr.png"
     }
   ]
 }
