@@ -72,6 +72,8 @@ p {
 
 .kiosk {
   height: 100dvh;
+  /* Keeps content clear of the iPad status bar and rounded corners in home-screen mode */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .screen {

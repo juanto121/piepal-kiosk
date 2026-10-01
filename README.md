@@ -52,3 +52,12 @@ vercel deploy --prod
 ```
 
 On the office device, open the deployed URL in kiosk mode, e.g. `chrome --kiosk https://<your-domain>`.
+
+## iPad setup
+
+1. In **Safari**, open https://piepal-kiosk.vercel.app → **Share** → **Add to Home Screen**. Keep **Open as Web App** on → **Add**.
+2. Open **PiePal** from the Home Screen icon. It runs without Safari's address bar and tabs; only the iPad status bar (clock, battery) stays.
+3. Lock the iPad to the kiosk with **Guided Access**: Settings → Accessibility → Guided Access → on, set a passcode, and set **Display Auto-Lock** to *Never*. Open PiePal, triple-click the top button → **Start**. Triple-click + passcode to exit.
+4. Keep it plugged in.
+
+The home-screen app has its own storage, separate from Safari: set stock from the owner panel inside the home-screen app.
