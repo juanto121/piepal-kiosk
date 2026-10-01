@@ -1,0 +1,43 @@
+{
+  "currency": "COP",
+  "defaultLanguage": "es",
+  "paymentTimeoutSeconds": 120,
+  "paymentNudgeSeconds": 30,
+  "chooseIdleSeconds": 60,
+  "ownerIdleSeconds": 60,
+  "thanksSeconds": 8,
+  "lowStockThreshold": 3,
+  "ownerPin": "1234",
+  "pickupNote": {
+    "es": "Recoge tu pie en la nevera de la izquierda.",
+    "en": "Grab your pie from the fridge on the left."
+  },
+  "pies": [
+    {
+      "id": "berries",
+      "theme": "berry",
+      "name": { "es": "Pie de frutos rojos", "en": "Berry pie" },
+      "description": {
+        "es": "Frutos rojos con masa de mantequilla.",
+        "en": "Mixed berries, buttery crust."
+      },
+      "price": 8000,
+      "initialStock": 10,
+      "image": null,
+      "paymentUrl": ""
+    },
+    {
+      "id": "lemon",
+      "theme": "lemon",
+      "name": { "es": "Pie de limón", "en": "Lemon pie" },
+      "description": {
+        "es": "Relleno cítrico de limón con masa de mantequilla.",
+        "en": "Zesty lemon filling, buttery crust."
+      },
+      "price": 8000,
+      "initialStock": 10,
+      "image": null,
+      "paymentUrl": ""
+    }
+  ]
+}
